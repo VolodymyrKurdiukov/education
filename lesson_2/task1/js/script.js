@@ -1,42 +1,42 @@
 let a = parseFloat(prompt('Введіть число а', ''));
 let b = parseFloat(prompt('Введіть число b', ''));
-let c = parseFloat(prompt('Введіть число c', ''));
-let squareOne = a + 12 + b;
-
 let summ = a + b;
-let multiplicationDenominator = 2 * a;
-let division = summ / multiplicationDenominator;
-let squareTwo = Math.sqrt(division);
-
-let multiplication = summ * c;
-let squareThree = Math.cbrt(multiplication);
-
-let divisionFour = a / - b;
-let squareFour = Math.sin(divisionFour);
+let multiplication = a * b;
+let division = a / b;
 
 document.write(`
 			<table>
 				<tr>
 					<td>
-						S1 = ${squareOne}
+						Шукане значення
+					</td>
+					<td>
+						Результат
 					</td>
 				</tr>
 				<tr>
 					<td>
-						S2 = ${squareTwo}
+						Сума
+					</td>
+					<td>
+						${summ}
 					</td>
 				</tr>
 				<tr>
+					<td>	
+						Добуток
+					</td>
 					<td>
-						S3 = ${squareThree}
+						${multiplication}
 					</td>
 				</tr>
 				<tr>
+					<td>	
+						Частка
+					</td>
 					<td>
-						S4 = ${squareFour}
+						${division}
 					</td>
 				</tr>
 			</table>
 `);
-
-

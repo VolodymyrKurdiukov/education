@@ -1,35 +1,29 @@
-let productPrice = 120;
-let productQuantity = 105;
-let total = productPrice * productQuantity;
-let tax = total * 5 / 100;
+const lenghtSm = 10;
+let lenghtM = lenghtSm / 100;
+let lenghtKm = lenghtM / 1000;
+
 document.write(`
 			<table>
 				<tr>
 					<td>
-						Ціна товару
+						Довжина в СМ
 					</td>
 					<td>
-						Кількість товару
+						Довжина в М
 					</td>
 					<td>
-						Загальна вартість
-					</td>
-					<td>
-						Податок 5%
+						Довжина в КМ
 					</td>
 				</tr>
 				<tr>
 					<td>
-						${productPrice}
+						${lenghtSm}
 					</td>
 					<td>
-						${productQuantity}
+						${lenghtM}
 					</td>
 					<td>
-						${total}
-					</td>
-					<td>
-						${tax}
+						${lenghtKm}
 					</td>
 				</tr>
 			</table>

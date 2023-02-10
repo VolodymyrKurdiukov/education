@@ -1,30 +1,12 @@
-const lenghtSm = 10;
-let lenghtM = lenghtSm / 100;
-let lenghtKm = lenghtM / 1000;
+let secondsPassed = parseInt(prompt('Скільки секунд пройшло від початку доби?',''));
+let hourInSeconds = 60 * 60;
+let minute = 60;
+
+let hours = Math.floor(secondsPassed / hourInSeconds);
+let minutes = Math.floor((secondsPassed % hourInSeconds) / minute);
 
 document.write(`
-			<table>
-				<tr>
-					<td>
-						Довжина в СМ
-					</td>
-					<td>
-						Довжина в М
-					</td>
-					<td>
-						Довжина в КМ
-					</td>
-				</tr>
-				<tr>
-					<td>
-						${lenghtSm}
-					</td>
-					<td>
-						${lenghtM}
-					</td>
-					<td>
-						${lenghtKm}
-					</td>
-				</tr>
-			</table>
+		Від початку доби пройшло ${secondsPassed} секунд, це ${hours} годин(а) та ${minutes} хвилин(а) 
 `);
+
+
