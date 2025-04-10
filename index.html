@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+</head>
+
+<body>
+   <h2>Task 0. Calculate the values ​​of expressions</h2>
+   <script>
+      // data entry
+      let a = parseFloat(prompt("Enter a number for a:"));
+      let b = parseFloat(prompt("Enter a number for b:"));
+      let c = parseFloat(prompt("Enter a number for с:"));
+
+      // Calculation of results
+      let s1 = a + 12 + b;
+      let s2 = Math.sqrt((a + b) / (2 * a));
+      let s3 = Math.cbrt((a + b) * c);
+      let s4 = Math.sin(a / -b);
+
+      // Output of results
+      document.write(`
+      <div>S1 = ${s1} </div><br>
+      <div>S3 = ${s3} </div><br>
+      <div>S2 = ${s2} </div><br>
+      <div>S4 = ${s4} </div><br>
+      `);
+
+   </script>
+   <h2>Task 1. Find the sum, product, and quotient of two real numbers. Display the result in a table.</h2>
+   <script>
+      // Calculation of results
+
+      let sum1 = a + b;
+      let product = a * b;
+      let quotient = a / b;
+
+      // Output of results in table format
+      document.write(`
+      <table border="1" width="200px">
+         <tr >
+            <th>Operation</th>
+            <th>Result</th>
+         </tr>
+         <tr >
+            <td>Sum</td>
+            <td>${sum1}</td>
+         </tr>
+         <tr >
+            <td>Product</td>
+            <td>${product}</td>
+         </tr>
+         <tr >
+            <td>Quotient</td>
+            <td>${quotient}</td>
+         </tr>
+      </table>`)
+   </script>
+   <h2>Problem 2. Given the year of birth (date: January 1) and the current year, find the number of years.</h2>
+   <script>
+      // data entry
+      let birthYear = parseInt(prompt("Enter your birth year:"));
+      let currentYear = parseInt(prompt("Enter the current year:"));
+      // Calculation of results
+      let age = currentYear - birthYear;
+      // Output of results
+      document.write(`
+      <div>Your age is: ${age} years</div><br>
+      `);
+   </script>
+   <h2>Problem 3. Given the unit price and quantity of the product, find the total price and VAT (5% of the total
+      price).</h2>
+   <script>
+      // data entry
+      let unitPrice = parseFloat(prompt("Enter the unit price of the product:"));
+      let quantity = parseInt(prompt("Enter the quantity of the product:"));
+      // Calculation of results
+      let totalPrice = unitPrice * quantity;
+      let vat = totalPrice * 0.05;
+      // Output of results
+      document.write(`
+      <div>Total price: ${totalPrice} UAH </div><br>
+      <div>VAT (5%): ${vat.toFixed(2)} </div><br>
+      `);
+   </script>
+   <h2>Problem 4. Given a length in centimeters, determine how many meters and kilometers it is.</h2>
+   <script>
+      // data entry
+      let lengthInCm = parseFloat(prompt("Enter the length in centimeters:"));
+      // Calculation of results
+      let lengthInM = lengthInCm / 100;
+      let lengthInKm = lengthInCm / 100000;
+      // Output of results
+      document.write(`
+      <div>Length in meters: ${lengthInM} m</div><br>
+      <div>Length in kilometers: ${lengthInKm} km</div><br>
+      `);
+   </script>
+   <h2>Problem 5. Given the number of seconds that have passed since the beginning of the day, determine how many hours
+      and minutes that is.</h2>
+   <script>
+      // data entry
+      let seconds = parseInt(prompt("Enter the number of seconds since the beginning of the day:"));
+      // Calculation of results
+      let hours = Math.floor(seconds / 3600);
+      let minutes = Math.floor((seconds % 3600) / 60);
+      // Output of results
+      document.write(`
+      <div>Hours: ${hours} h</div><br>
+      <div>Minutes: ${minutes} min</div><br>
+      `);
+   </script>
+   <h2>Task 6. The cost of the product and the number of units of 3 products are entered from the keyboard. Calculate
+      the cost of each product separately and the total cost. Print a receipt (like in a supermarket) using markup
+      elements.</h2>
+   <script>
+      // data entry
+      let product1Price = parseFloat(prompt("Enter the price of product 1:"));
+      let product1Quantity = parseInt(prompt("Enter the quantity of product 1:"));
+      let product2Price = parseFloat(prompt("Enter the price of product 2:"));
+      let product2Quantity = parseInt(prompt("Enter the quantity of product 2:"));
+      let product3Price = parseFloat(prompt("Enter the price of product 3:"));
+      let product3Quantity = parseInt(prompt("Enter the quantity of product 3:"));
+
+      // Calculation of results
+      let product1Total = product1Price * product1Quantity;
+      let product2Total = product2Price * product2Quantity;
+      let product3Total = product3Price * product3Quantity;
+      let totalCost = product1Total + product2Total + product3Total;
+
+      // Output of results in table format
+      document.write(`
+      <table border="1" width="500px">
+         <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+         </tr>
+         <tr>
+            <td>Product 1</td>
+            <td>${product1Price} UAH</td>
+            <td>${product1Quantity}</td>
+            <td>${product1Total} UAH</td>
+         </tr>
+         <tr>
+            <td>Product 2</td>
+            <td>${product2Price} UAH</td>
+            <td>${product2Quantity}</td>
+            <td>${product2Total} UAH</td>
+         </tr>
+         <tr>
+            <td>Product 3</td>
+            <td>${product3Price} UAH</td>
+            <td>${product3Quantity}</td>
+            <td>${product3Total} UAH</td>
+         </tr>
+         <tr>
+            <th colspan="3">Total Cost</th>
+            <th>${totalCost} UAH</th>
+         </tr>
+      </table>`);
+   </script>
+   <h2>Task 7. Find the sum of a random month number (from 1 to 12) and a random day number (from 0 to 6).</h2>
+   <script>
+
+      // Generate random month number (1 to 12)
+      let monthMin = 1;
+      let monthMax = 12;
+      let monthRandom = monthMin + Math.floor(Math.random() * (monthMax - monthMin + 1));
+      // Generate random day number (0 to 6)
+      let dayMin = 0;
+      let dayMax = 6;
+      let dayRandom = dayMin + Math.floor(Math.random() * (dayMax - dayMin + 1));
+
+      let sum = monthRandom + dayRandom;
+
+      // Output of results
+      document.write(`
+      <div>Random Month: ${monthRandom}</div><br>
+      <div>Random Day: ${dayRandom}</div><br>
+      <div>Sum of Month and Day: ${sum}</div><br>
+      `);
+   </script>
+</body>
+
+</html>
