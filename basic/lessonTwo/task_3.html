@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h2>Problem 3. Given the unit price and quantity of the product, find the total price and VAT (5% of the total
+      price).</h2>
+   <script>
+      // data entry
+      let unitPrice = parseFloat(prompt("Enter the unit price of the product:"));
+      let quantity = parseInt(prompt("Enter the quantity of the product:"));
+      // Calculation of results
+      let totalPrice = unitPrice * quantity;
+      let vat = totalPrice * 0.05;
+      // Output of results
+      document.write(`
+      <div>Total price: ${totalPrice} UAH </div><br>
+      <div>VAT (5%): ${vat.toFixed(2)} </div><br>
+      `);
+   </script>
+</body>
+</html>

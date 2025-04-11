@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h2>Task 0. Calculate the values ​​of expressions</h2>
+   <script>
+      // data entry
+      let a = parseFloat(prompt("Enter a number for a:"));
+      let b = parseFloat(prompt("Enter a number for b:"));
+      let c = parseFloat(prompt("Enter a number for с:"));
+
+      // Calculation of results
+      let s1 = a + 12 + b;
+      let s2 = Math.sqrt((a + b) / (2 * a));
+      let s3 = Math.cbrt((a + b) * c);
+      let s4 = Math.sin(a / -b);
+
+      // Output of results
+      document.write(`
+      <div>S1 = ${s1} </div><br>
+      <div>S3 = ${s3} </div><br>
+      <div>S2 = ${s2} </div><br>
+      <div>S4 = ${s4} </div><br>
+      `);
+
+   </script>
+</body>
+</html>  

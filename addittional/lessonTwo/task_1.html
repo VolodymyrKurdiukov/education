@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <h2>Given the screen width and the number of elements that should be displayed in a row, determine 
+      the width of the elements that should be displayed in this row.</h2>
+   <script>
+      // data entry
+      let screenWidth = parseFloat(prompt("Enter a screen width:"));
+      let quantity = parseFloat(prompt("Enter a quantity:"));
+
+      // Calculation of results
+      let elementsWidth = screenWidth / quantity;
+      // Output of results
+      document.write(`
+      <div>Screen Width: ${screenWidth}</div><br>
+      <div>Quantity: ${quantity}</div><br>
+      <div>Elements Width: ${elementsWidth}</div><br>
+      `);
+   </script>
+</body>
+
+</html>

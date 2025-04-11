@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <h2>The unit price and quantity of two products are entered from the keyboard.
+      The price of each type of product separately and the total price are displayed on the screen.</h2>
+   <script>
+
+      // data entry
+
+      let productOne = parseFloat(prompt("Enter the price of the first product:"));
+      let productTwo = parseFloat(prompt("Enter the price of the second product:"));
+      let productOneQuantity = parseInt(prompt("Enter the quantity of the first product:"));
+      let productTwoQuantity = parseInt(prompt("Enter the quantity of the second product:"));
+
+      // Calculation results
+
+      let totalCostProductOne = productOne * productOneQuantity;
+      let totalCostProductTwo = productTwo * productTwoQuantity;
+      let totalCost = totalCostProductOne + totalCostProductTwo;
+
+      //output of results
+
+      document.write(`
+         <table border="1" width="500px">
+         <tr>
+            <th>Product</th>
+            <th>Unit Price</th>
+            <th>Quantity of Product</th>
+            <th>Total</th>
+         </tr>
+         <tr>
+            <td>Product 1</td>
+            <td>${productOne.toFixed(2)} UAH</td>
+            <td>${productOneQuantity}</td>
+            <td>${totalCostProductOne.toFixed(2)} UAH</td>
+         </tr>
+         <tr>
+            <td>Product 2</td>
+            <td>${productTwo.toFixed(2)} UAH</td>
+            <td>${productTwoQuantity}</td>
+            <td>${totalCostProductTwo.toFixed(2)} UAH</td>
+         </tr>
+
+         <tr>
+            <th colspan="3">Total Cost</th>
+            <th>${totalCost.toFixed(2)} UAH</th>
+         </tr>
+      </table>
+   `);
+   </script>
+
+
+
+
+</body>
+
+</html>

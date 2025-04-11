@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <h2>Task 1. Find the sum, product, and quotient of two real numbers. Display the result in a table.</h2>
+   <script>
+
+      // data entry
+      let a = parseFloat(prompt("Enter a number for a:"));
+      let b = parseFloat(prompt("Enter a number for b:"));
+
+      // Calculation of results
+
+      let sum11 = a + b;
+      let product = a * b;
+      let quotient = a / b;
+
+      // Output of results in table format
+      document.write(`
+      <table border="1" width="200px">
+         <tr >
+            <th>Operation</th>
+            <th>Result</th>
+         </tr>
+         <tr >
+            <td>Sum</td>
+            <td>${sum11}</td>
+         </tr>
+         <tr >
+            <td>Product</td>
+            <td>${product}</td>
+         </tr>
+         <tr >
+            <td>Quotient</td>
+            <td>${quotient}</td>
+         </tr>
+      </table>`)
+   </script>
+</body>
+
+</html>

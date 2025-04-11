@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h2>Problem 4. Given a length in centimeters, determine how many meters and kilometers it is.</h2>
+   <script>
+      // data entry
+      let lengthInCm = parseFloat(prompt("Enter the length in centimeters:"));
+      // Calculation of results
+      let lengthInM = lengthInCm / 100;
+      let lengthInKm = lengthInCm / 100000;
+      // Output of results
+      document.write(`
+      <div>Length in meters: ${lengthInM} m</div><br>
+      <div>Length in kilometers: ${lengthInKm} km</div><br>
+      `);
+   </script>
+</body>
+</html>

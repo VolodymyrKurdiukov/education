@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h2>Problem 5. Given the number of seconds that have passed since the beginning of the day, determine how many hours
+      and minutes that is.</h2>
+   <script>
+      // data entry
+      let seconds = parseInt(prompt("Enter the number of seconds since the beginning of the day:"));
+      // Calculation of results
+      let hours = Math.floor(seconds / 3600);
+      let minutes = Math.floor((seconds % 3600) / 60);
+      // Output of results
+      document.write(`
+      <div>Hours: ${hours} h</div><br>
+      <div>Minutes: ${minutes} min</div><br>
+      `);
+   </script>
+</body>
+</html>

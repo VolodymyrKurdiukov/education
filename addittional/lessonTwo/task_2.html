@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <h2>Enter the salary and the subsistence minimum from the keyboard.
+      Determine the amount of social assistance (assuming that the salary is lower).</h2>
+
+   <script>
+
+      // data entry
+
+      let salary = prompt("Enter the salary:");
+      let subsistenceMinimum = prompt("Enter the subsistence minimum:");
+      let socialAssistance = 0;
+
+      // Calculation and output of results
+
+      if (salary < subsistenceMinimum) {
+         socialAssistance = subsistenceMinimum - salary;
+         document.write(`
+         <div>Salry: ${salary}</div><br> 
+         <div>Subsistence minimum: ${subsistenceMinimum}</div><br>
+         <div>The amount of social assistance is: ${socialAssistance}</div><br> 
+         `);
+      } else {
+         document.write(`
+         <div>Salry: ${salary}</div><br> 
+         <div>Subsistence minimum: ${subsistenceMinimum}</div><br>
+         <div> No social assistance is needed.</div><br> 
+         `);
+      }
+
+      // // data entry
+
+      // let wage = parseFloat(prompt("Enter your wage: "));
+      // let minimumLifeCost = parseFloat(prompt("Enter the minimum life cost: "));
+
+      // // Calculation of results
+
+      // let socialCalculate = wage - minimumLifeCost;
+      // let social = Math.abs(socialCalculate);
+
+      // // Output of results
+      // document.write(`
+      // <div>Wage: ${wage}</div><br> 
+      // <div>Minimum Life Cost: ${minimumLifeCost}</div><br>
+      // <div>Your social: ${social}</div><br> 
+      // `);
+   </script>
+
+
+</body>
+
+</html>
