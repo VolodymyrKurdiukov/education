@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <h2>Given three real variables a, b, and c. Write an algorithm that swaps the values ​​of these variables in the
+      following way: variable a takes on the value of variable b, variable b takes on the value of variable c, and
+      variable c is the previous value of variable a.</h2>
+
+   <script>
+
+      // data entry
+      let a = 1
+      let b = 2
+      let c = 3
+      //output of results
+      document.write(`     
+         <div>Before swapping: a = ${a}, b = ${b}, c = ${c}</div><br> 
+      `);
+
+      // Swapping values
+      let d = a
+      a = b
+      b = c
+      c = d
+      //output of results
+      document.write(`     
+         <div>After swapping: a = ${a}, b = ${b}, c = ${c}</div><br>
+      `);
+
+   </script>
+</body>
+
+</html>

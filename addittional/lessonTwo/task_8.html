@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <h2>Develop a program (do not use if) that determines the century number C from the year number Y (consider that the
+      beginning of the 20th century was 1901, not 1900).</h2>
+   <script>
+      // data entry
+      let year = parseInt(prompt("Enter the year: ")); // Prompt user for input and convert to integer
+
+      // Calculation results
+      let century = Math.ceil(year / 100); // Calculate the century by dividing the year by 100 and rounding up
+
+      //output of results
+      document.write(`
+         <div>Year: ${year}</div><br>
+         <div>Century: ${century}</div><br>
+      `);
+   </script>
+</body>
+
+</html>

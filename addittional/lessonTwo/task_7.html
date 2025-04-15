@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <h2>Write an algorithm that calculates the integer and fractional parts of a given number x. For example: the number
+      23.56 => integer: 23, fractional: 0.56.</h2>
+   <script>
+      // data entry
+      let x = parseFloat(prompt("Enter a number: ")); // Prompt user for input and convert to float
+      // Calculation results
+      let integerPart = Math.floor(x);
+      let fractionalPart = (x - integerPart).toFixed(2); // toFixed(2) to keep two decimal places
+      //output of results
+      document.write(`     
+         <div>Integer part: ${integerPart}, Fractional part: ${fractionalPart}</div><br>
+      `);
+   </script>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <h2>The child's age is entered from the keyboard. Display on the screen how many years later he will attend
+      kindergarten, go to school, graduate from school, enter and graduate</h2>
+   <script>
+
+      // data entry
+
+      let childsAge = parseInt(prompt("Enter the age of the child: "));
+
+      // Calculation results
+
+      let dayCareStart = 3 - childsAge;
+      let dayCareEnd = 6 - childsAge;
+      let schoolStart = 6 - childsAge;
+      let schoolEnd = 18 - childsAge;
+      let universityStart = 18 - childsAge;
+      let universityEnd = 22 - childsAge;
+
+      //output of results
+
+         document.write(`
+            <table border="1" width="700px">
+            <tr>
+               <th>Child's age</th>
+               <th>Day care start</th>
+               <th>Day care end</th>
+               <th>School start</th>
+               <th>School end</th>
+               <th>University start</th>
+               <th>University end</th>
+            </tr>
+            <tr>
+               <td>${childsAge}</td>
+               <td>${dayCareStart}</td>
+               <td>${dayCareEnd}</td>
+               <td>${schoolStart}</td>
+               <td>${schoolEnd}</td>
+               <td>${universityStart}</td>
+               <td>${universityEnd}</td>
+            </tr>
+         </table>
+         <br>
+      `);
+
+
+      document.write(`
+         <table border="1" width="500px">
+            <tr>
+               <th>Event</th>
+               <th>Years Left</th>
+            </tr>
+            <tr>
+               <td>Kindergarten</td>
+               <td>${dayCareStart} years</td>
+            </tr>
+            <tr>
+               <td>School</td>
+               <td>${schoolStart} years</td>
+            </tr>
+            <tr>
+               <td>Graduation from School</td>
+               <td>${schoolEnd} years</td>
+            </tr>
+            <tr>
+               <td>University</td>
+               <td>${universityStart} years</td>
+            </tr>
+            <tr>
+               <td>Graduation from University</td>
+               <td>${universityEnd} years</td>
+            </tr>
+         </table>
+         `);
+
+   </script>
+
+
+
+</body>
+
+</html>

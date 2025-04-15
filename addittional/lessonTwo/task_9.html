@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <h2>Write a program to solve the problem: it is the Nth second of the day, determine how many full hours and full
+      minutes have passed until this moment.</h2>
+   <script>
+      let seconds = prompt("Enter the number of seconds since the start of the day (0-86400):");
+      if (seconds < 0 || seconds > 86400) {
+         document.write("Please enter a valid number of seconds between 0 and 86400.");
+      } else {
+         let hours = Math.floor(seconds / 3600);
+         let minutes = Math.floor((seconds % 3600) / 60);
+         document.write(`Full hours: ${hours}, Full minutes: ${minutes}<br><br>`);
+      }
+   </script>
+
+   <script>
+      let currentSecond = parseInt(prompt("Enter the number of seconds since the beginning of the day:"));
+      let currentMinute = Math.floor((currentSecond % 3600) / 60);
+      let currentHour = Math.floor(currentSecond / 3600);
+
+      document.write(`
+      <div>Seconds: ${currentSecond} s</div><br>
+      <div>Minutes: ${currentMinute} min</div><br>
+      <div>Hours: ${currentHour} h</div><br>
+      `);
+   </script>
+</body>
+
+</html>

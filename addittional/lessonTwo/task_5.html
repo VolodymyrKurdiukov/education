@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <h2>Determine what salary a part-time worker will receive at the company for the work performed if he is credited with S UAH and the tax is 20%.</h2>
+   <script>
+
+      // data entry
+
+      let salaryBeforeTax = parseFloat(prompt("Enter your salary before tax: "));
+      let taxRate = parseFloat(prompt("Enter your tax rate (as a percentage): "));
+
+      // Calculation results
+
+      let taxAmount = (salaryBeforeTax * taxRate) / 100;
+      let salaryAfterTax = salaryBeforeTax - taxAmount;
+
+      //output of results
+
+      document.write(`     
+         <div>Salry before tax: ${salaryBeforeTax}</div><br> 
+         <div>Tax rate: ${taxRate}</div><br>
+         <div>Tax amount: ${taxAmount}</div><br> 
+         <div>Salry after tax: ${salaryAfterTax}</div><br> 
+      `);
+   </script>
+
+</body>
+
+</html>
