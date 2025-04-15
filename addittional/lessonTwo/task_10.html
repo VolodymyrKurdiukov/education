@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <h2>The number of coins with a face value of 1 kopiiok is entered from the keyboard. Determine how many hryvnias and
+      kopiiok are in this amount. For example, given 245 kopiiok, and output 2 UAH 45 kopiiok.</h2>
+   <script>
+      // data entry
+      let coins = parseInt(prompt("Enter the number of coins (1 kopiiok each):"));
+
+      // Calculation results
+      if (isNaN(coins) || coins < 0) {
+         document.write("<p style='color: red;'>Please enter a valid number of coins.</p>");
+      } else {
+         let hryvnias = Math.floor(coins / 100);
+         let kopiiok = coins % 100;
+         document.write(`<h3>Total coins entered: ${coins}</h3>`);
+         document.write(`
+         <table border="1" width="400px" cellpadding="10" style="border-collapse: collapse; text-align: center;">
+            <tr style="background-color: #f0f0f0;">
+               <th>Unit</th>
+               <th>Value</th>
+               <th>Explanation</th>
+            </tr>
+            <tr>
+               <td>Hryvnias</td>
+               <td>${hryvnias}</td>
+               <td>Each hryvnia = 100 kopiiok</td>
+            </tr>
+            <tr>
+               <td>kopiiok</td>
+               <td>${kopiiok}</td>
+               <td>Remaining kopiiok after full hryvnias</td>
+            </tr>
+         </table>
+      `);
+      }
+   </script>
+
+
+   <script>
+
+      // data entry
+      let coinAmount = parseInt(prompt("Enter the amount of coins:"));
+
+      // Calculation results
+      let uah = Math.floor(coinAmount / 100);
+      let coin = coinAmount % 100;
+
+      //output of results
+      document.write(`<h3>Total сщшты entered: ${coinAmount}</h3>`);
+
+      document.write(`
+            <table border="1" width="400px" cellpadding="10" style="border-collapse: collapse; text-align: center;">
+               <tr style="background-color: #f0f0f0;">
+                  <th>Coin amount</th>
+                  <th>UAH</th>
+                  <th>Coins</th>
+               </tr>
+               <tr>
+                  <td>${coinAmount}</td>
+                  <td>${uah}</td>
+                  <td>${coin}</td>
+               </tr>
+            </table>
+         `);
+   </script>
+</body>
+
+</html>

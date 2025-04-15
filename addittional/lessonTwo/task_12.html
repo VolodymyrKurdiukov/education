@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <h2>
+      The number of coins with a denomination of 2 cents, 5 cents, 25 cents, 50 cents is entered from the
+      keyboard. Determine how many dollars and cents are in this amount.
+   </h2>
+   <script>
+      //data entry
+      let twoCents = parseInt(prompt("Enter the number of 2 cent coins: "));
+      let fiveCents = parseInt(prompt("Enter the number of 5 cent coins: "));
+      let twentyFiveCents = parseInt(prompt("Enter the number of 25 cent coins: "));
+      let fiftyCents = parseInt(prompt("Enter the number of 50 cent coins: "));
+
+      // Calculation results
+      let totalCents = (twoCents * 2) + (fiveCents * 5) + (twentyFiveCents * 25) + (fiftyCents * 50);
+      let dollars = Math.floor(totalCents / 100);
+      let cents = totalCents % 100;
+
+
+      //output of results
+      document.write(`Total amount: " ${dollars} " dollars and " ${cents} " cents. <br><br><br><br>`);
+      document.write(`
+         <table border="1" width="400px" cellpadding="10" style="border-collapse: collapse; text-align: center;">
+            <tr style="background-color: #f0f0f0;">
+               <th>//</th>
+               <th>2</th>
+               <th>5</th>
+               <th>25</th>
+               <th>50</th>
+            </tr>
+            <tr>
+               <td>Quantity</td>
+               <td>${twoCents}</td>
+               <td>${fiveCents}</td>
+               <td>${twentyFiveCents}</td>
+               <td>${fiftyCents}</td>
+            </tr>
+            <tr>
+               <td>Dollars and cents are in this amount</td>
+               <td colspan="4">${dollars}  dollars and  ${cents}  cents.</td>
+            </tr>
+         </table>
+      `);
+   </script>
+</body>
+
+</html>

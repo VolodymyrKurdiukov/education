@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <h2>Given the current number of hours, minutes, and seconds (as on a clock). Determine 1) what number of seconds will
+      be on the clock in N seconds.
+      2) what number of minutes will be on the clock in N seconds, X minutes.</h2>
+   <script>
+      //data entry
+      let hours = parseInt(prompt("Enter current hours on the clock (0–23):"));// Current hours on the clock
+      let minutes = parseInt(prompt("Enter Current minutes on the clock (0–59):")); // Current minutes on the clock
+      let seconds = parseInt(prompt("Enter Current seconds on the clock(0–59):")); // Current seconds on the clock
+      let N = parseInt(prompt("Enter number of seconds to add (N)?")); // Number of seconds to add
+      let X = parseInt(prompt("Enter Number of minutes to add (X)? "));  // Number of minutes to add
+
+      // Calculate total seconds from current time
+      let totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+      let totalSecondsAfterN = totalSeconds + N;
+      let totalSecondsAfterNX = totalSeconds + N + (X * 60);
+
+      // Calculate new hours, minutes, and seconds
+      let newHours1 = Math.floor(totalSecondsAfterN / 3600) % 24;
+      let newMinutes1 = Math.floor((totalSecondsAfterN % 3600) / 60);
+      let newSeconds1 = totalSecondsAfterN % 60;
+
+      let newHours2 = Math.floor(totalSecondsAfterNX / 3600) % 24;
+      let newMinutes2 = Math.floor((totalSecondsAfterNX % 3600) / 60);
+      let newSeconds2 = totalSecondsAfterNX % 60;
+      document.write(`<h3>Current Time: ${hours}:${minutes}:${seconds}</h3>`);
+      document.write(`New time after adding ${N} seconds ${newHours1}:${newMinutes1}:${newSeconds1}, <br>`);
+      document.write(`New time after adding ${N} seconds and ${X} minutes: ${newHours2}:${newMinutes2}:${newSeconds2}`);
+   </script>
+
+
+
+
+</body>
+
+</html>

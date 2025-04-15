@@ -8,8 +8,53 @@
 </head>
 
 <body>
+   <h2>
+      Write a program to solve the problem: it is the Nth second of the day, determine how many full hours and full
+      minutes have passed until this moment.
+   </h2>
 
-   <h2>Write a program to solve the problem: it is the Nth second of the day, determine how many full hours and full
+   <script>
+
+      // data entry
+      let totalSeconds = parseInt(prompt("Enter seconds from 0 to 86400:"));
+      // Calculation results
+      if (isNaN(totalSeconds) || totalSeconds < 0 || totalSeconds > 86400) {
+         document.write("<p style='color: red;'>Please enter a valid number between 0 and 86400.</p>");
+      } else {
+         let hours = Math.floor(totalSeconds / 3600);
+         let minutes = Math.floor((totalSeconds % 3600) / 60);
+         let seconds = totalSeconds % 60;
+
+         document.write(`<h3>Total seconds entered: ${totalSeconds}</h3>`);
+
+         document.write(`
+            <table border="1" width="400px" cellpadding="10" style="border-collapse: collapse; text-align: center;">
+               <tr style="background-color: #f0f0f0;">
+                  <th>Unit</th>
+                  <th>Value</th>
+                  <th>Explanation</th>
+               </tr>
+               <tr>
+                  <td>Hours</td>
+                  <td>${hours}</td>
+                  <td>Each hour = 3600 seconds</td>
+               </tr>
+               <tr>
+                  <td>Minutes</td>
+                  <td>${minutes}</td>
+                  <td>Remaining seconds ÷ 60</td>
+               </tr>
+               <tr>
+                  <td>Seconds</td>
+                  <td>${seconds}</td>
+                  <td>Remaining seconds after full minutes</td>
+               </tr>
+            </table>
+         `);
+      }
+   </script>
+
+   <!-- <h2>Write a program to solve the problem: it is the Nth second of the day, determine how many full hours and full
       minutes have passed until this moment.</h2>
    <script>
       let seconds = prompt("Enter the number of seconds since the start of the day (0-86400):");
@@ -32,7 +77,7 @@
       <div>Minutes: ${currentMinute} min</div><br>
       <div>Hours: ${currentHour} h</div><br>
       `);
-   </script>
+   </script> -->
 </body>
 
 </html>

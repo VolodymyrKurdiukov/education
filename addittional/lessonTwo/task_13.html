@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <h2>Determine how many full weeks there are in the specified number of days.</h2>
+   <script>
+      // Data entry
+      let days = parseInt(prompt("Enter the number of days: "));
+      let week = 7; // Number of days in a week
+      // Calculation results
+      let weeks = Math.floor(days / week);
+      let weekStarted = days % week; // Remaining days after full weeks
+      let remainingDays = Math.abs(Math.floor((days % week) - week));
+      // Output of results
+      document.write(`
+      <div>Total weeks: ${weeks} weeks</div><br>
+      <div>Days passed in the new week : ${weekStarted} days.</div><br>
+      <div>Remaining days to full week: ${remainingDays} days.</div><br>
+      `);
+   </script>
+
+
+</body>
+
+</html>
