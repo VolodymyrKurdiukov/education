@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <h2>The number of months that have passed since a certain point in time is entered from the keyboard. Output the full
+      number of years and months. For example, given 28 months, output 2 years and 4 months.</h2>
+   <script>
+      //data entry
+      let months = parseInt(prompt("Enter the number of months:")); // Number of months entered by the user
+
+      // Calculation results
+      let years = Math.floor(months / 12); // Calculate the number of years
+      let remainingMonths = months % 12; // Calculate the remaining months after converting to years
+
+      // Output of results
+      document.write(`<h3>${months} months is equal to ${years} years and ${remainingMonths} months.</h3>`); // Output the result
+   </script>
+
+</body>
+
+</html>

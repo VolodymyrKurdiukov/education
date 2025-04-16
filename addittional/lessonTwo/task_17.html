@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <h2>
+      Encrypt one entered English character in uppercase (one of the characters: A,B,…Z) using the shift method (Caesar
+      cipher).
+   </h2>
+   <script>
+      // Ask the user to enter one uppercase English letter (A-Z)
+      let letter = prompt("Enter one uppercase English letter (A-Z):");
+
+      // Ask the user to enter a number for the shift (e.g., 3)
+      let shift = prompt("Enter a number for the shift:");
+      shift = parseInt(shift); // Convert the input text to a number
+
+      // Check: is it exactly one uppercase letter (from A to Z)?
+      if (letter.length === 1 && letter >= "A" && letter <= "Z") {
+         // Get the position of the letter in the alphabet (A = 0, B = 1, ..., Z = 25)
+         let position = letter.charCodeAt(0) - 65;
+
+         // Add the shift and use modulo 26 to stay within the alphabet range
+         let newPosition = (position + shift) % 26;
+
+         // Convert the new position back to a letter
+         let newLetter = String.fromCharCode(newPosition + 65);
+
+         // Show the result
+         alert("Encrypted letter: " + newLetter);
+      } else {
+         alert("Please enter ONE UPPERCASE English letter (A-Z).");
+      }
+
+   </script>
+</body>
+
+</html>
