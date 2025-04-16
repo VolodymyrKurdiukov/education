@@ -18,6 +18,7 @@ body{
    font-weight: 700;
    border: 1px solid #ccc;
    text-align: center;
+   margin: 10px 0;
 }
 .task:hover,.lesson:hover{
    background-color: #e0e0e0;
