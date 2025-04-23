@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../../css/style.css">
+   <title>Task 7</title>
+</head>
+
+<body>
+   <h2>Task 7. The month number is entered from the keyboard. Display which season it belongs to.
+   </h2>
+   <script>
+
+      //data entering
+      let month = prompt("Enter the month number (1-12):");
+      let season;
+
+
+      //data validation and output
+      switch (parseInt(month)) {
+         case 1:
+         case 2:
+         case 3:
+            season = "Winter";
+            break;
+         case 4:
+         case 5:
+         case 6:
+            season = "Spring";
+            break;
+         case 7:
+         case 8:
+         case 9:
+            season = "Summer";
+            break;
+         case 10:
+         case 11:
+         case 12:
+            season = "Autumn";
+            break;
+         default:
+            season = "Invalid month number! Please enter a number between 1 and 12.";
+      }
+
+      document.write(`The month number ${month} belongs to the ${season}.`);
+   </script>
+</body>
+
+</html>

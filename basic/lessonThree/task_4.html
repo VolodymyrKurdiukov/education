@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../../css/style.css">
+   <title>Task 4</title>
+</head>
+
+<body>
+   <h2>Task 4. The person's age is entered from the keyboard. The screen displays who they are (kindergarten child,
+      schoolchild, student, employee, pensioner).</h2>
+   <script>
+      //data entry
+      let age = parseInt(prompt("Enter your age:"));
+      let kindergartenAge = 6;
+      let schoolAge = 17;
+      let studentAge = 22;
+      let employeeAge = 60;
+      let pensionerAge = 70;
+
+      //data processing and output
+
+
+      if (age < 0) {
+         document.write(`Invalid age entered. Your age is ${age}.`);
+      } else if (age <= kindergartenAge) {
+         document.write(`You are a kindergarten child. Your age is ${age}.`);
+      } else if (age <= schoolAge) {
+         document.write(`You are a schoolchild. Your age is ${age}.`);
+      } else if (age <= studentAge) {
+         document.write(`You are a student. Your age is ${age}.`);
+      } else if (age <= employeeAge) {
+         document.write(`You are an employee. Your age is ${age}.`);
+      } else {
+         document.write(`You are a pensioner. Your age is ${age}.`);
+      }
+   </script>
+
+</body>
+
+</html>

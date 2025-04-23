@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../../css/style.css">
+   <title>Task 2</title>
+</head>
+
+<body>
+   <h2>Task 2. The price of the product and the amount of money are entered from the keyboard. If there is not enough
+      money, we refuse the purchase, otherwise, if there is still money left, we offer to buy a lottery ticket for 4
+      UAH.</h2>
+   <script>
+
+      //data entry
+      let productPrice = parseFloat(prompt("Enter the price of the product:"));
+      let money = parseFloat(prompt("Enter the amount of money you have:"));
+      document.write(`Product price:  ${productPrice} <br>
+      Money available: ${money} <br>`);
+
+
+      //check if the user has enough money to buy the product
+      if (money < productPrice) {
+         document.write("Not enough money to buy the product.");
+      } else {
+         let remainingMoney = money - productPrice;
+         document.write(`You can buy the product. Remaining money: ${remainingMoney} <br>`);
+         if (remainingMoney >= 4) {
+            document.write("You can also buy a lottery ticket for 4 UAH.");
+            let quantity = Math.floor(remainingMoney / 4);
+            remainingMoney = remainingMoney % 4;
+            document.write(` You can buy ${quantity} lottery tickets. Remaining money after purchasing a ticket : ${remainingMoney} <br>`);
+         } else if (remainingMoney < 4 && remainingMoney > 0) {
+            document.write(`You don't have enough money to buy a lottery ticket, but you have some money left. Remaining money: ${remainingMoney} <br>`);
+         } else {
+            document.write("Not enough money to buy a lottery ticket.");
+         }
+      }
+   </script>
+</body>
+
+</html>

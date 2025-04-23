@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../../css/style.css">
+   <title>Task 1</title>
+</head>
+
+<body>
+   <h2>Task 1. The names of two children and the number of candies they have are entered from the keyboard. Display the
+      name of the child who has the most candies, or display that the number is the same.</h2>
+   <script>
+
+      // Prompt the user for the names and number of candies
+      let name1 = prompt("Enter the name of the first child:", "Child 1");
+      let name2 = prompt("Enter the name of the second child:", "Child 2");
+      let candies1 = parseInt(prompt(`Enter the number of candies ${name1} has:`, "10"), 10);
+      let candies2 = parseInt(prompt(`Enter the number of candies ${name2} has:`, "10"), 10);
+
+
+      document.write(`
+   <div>${name1} has ${candies1} candies.</div><br>
+   <div>${name2} has ${candies2} candies.</div><br>`)
+
+
+      // Compare the number of candies and display the result
+
+      if (candies1 > candies2) {
+         document.write(`${name1} has more candies.`);
+      } else if (candies2 > candies1) {
+         document.write(`${name2} has more candies.`);
+      } else {
+         document.write(`Both children have the same number of candies.`);
+      }
+   </script>
+</body>
+
+</html>

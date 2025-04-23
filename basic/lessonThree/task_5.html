@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../../css/style.css">
+   <title>Task 5</title>
+</head>
+
+<body>
+   <h2>Task 5. The name of the driver's category is entered from the keyboard (A-motorcycle, B-car, C-truck). Display
+      the name of the vehicle he can drive on the screen.</h2>
+
+   <script>
+
+      //data from the keyboard
+      let category = prompt("Enter the driver's category (A, B, C):").toUpperCase();
+      let vehicle;
+      //output result
+      switch (category) {
+         case 'A':
+            vehicle = "Motorcycle";
+            break;
+         case 'B':
+            vehicle = "Car";
+            break;
+         case 'C':
+            vehicle = "Truck";
+            break;
+         default:
+            vehicle = "Unknown category";
+      }
+
+      document.write(`Your category is "${category}". You can drive a: ${vehicle}`);
+   </script>
+</body>
+
+</html>

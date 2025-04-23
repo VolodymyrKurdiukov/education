@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../../css/style.css">
+   <title>Task 3</title>
+</head>
+
+<body>
+   <h2>Task 3. A number from 1 to 5 is randomly generated. Try to guess the number in 2 attempts.</h2>
+   <script>
+      //data entry
+      let numberMin = 1;
+      let numberMax = 5;
+      let randomNumber = numberMin + Math.floor(Math.random() * (numberMax - numberMin + 1));
+      let userNumber = parseInt(prompt("Guess the number from 1 to 5:"));
+      let userNumber2 = parseInt(prompt("Try again:"));
+      // Output of results
+      document.write(`
+      <div>Your First Guess: ${userNumber}</div><br>
+      <div>Your Second Guess: ${userNumber2}</div><br>
+      <div>Random Number: ${randomNumber}</div><br>
+      `);
+      //check the first attempt
+      if (userNumber === randomNumber) {
+         document.write("Congratulations! You guessed the number on the first try!");
+      } else if (userNumber2 === randomNumber) {
+         document.write("Congratulations! You guessed the number on the second try!");
+      } else {
+         document.write(`Sorry, you didn't guess the number. The correct number was ${randomNumber}.`);
+      }
+
+   </script>
+</body>
+
+</html>

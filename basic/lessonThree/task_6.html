@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../../css/style.css">
+   <title>Task 6</title>
+</head>
+
+<body>
+   <h2>Task 6. Enter the number of the day of the week from the keyboard. Display the name of the day on the screen.
+   </h2>
+   <script>
+
+      //data input
+      let dayNumber = prompt("Enter the number of the day of the week (1-7):");
+      //    data validation and output 
+      switch (dayNumber) {
+         case '1':
+            document.write("Monday");
+            break;
+         case '2':
+            document.write("Tuesday");
+            break;
+         case '3':
+            document.write("Wednesday");
+            break;
+         case '4':
+            document.write("Thursday");
+            break;
+         case '5':
+            document.write("Friday");
+            break;
+         case '6':
+            document.write("Saturday");
+            break;
+         case '7':
+            document.write("Sunday");
+            break;
+         default:
+            document.write("Invalid input. Please enter a number between 1 and 7.");
+      }
+   </script>
+</body>
+
+</html>
