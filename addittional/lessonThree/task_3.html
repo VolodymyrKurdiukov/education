@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../../css/style.css">
+   <title>Task 3</title>
+</head>
+
+<body>
+   <h2>The computer guesses a number from 1 to 10. Two users provide their answers. The one whose number is closest to
+      the number guessed by the computer wins.</h2>
+   <script>
+      let computerNumber = Math.floor(Math.random() * 10) + 1;
+      let user1Number = parseInt(prompt("User 1, enter your number (1-10):"));
+      let user2Number = parseInt(prompt("User 2, enter your number (1-10):"));
+
+      if (user1Number < 1 || user1Number > 10 || user2Number < 1 || user2Number > 10) {
+         alert("Please enter a number between 1 and 10.");
+      } else {
+         let user1Difference = Math.abs(computerNumber - user1Number);
+         let user2Difference = Math.abs(computerNumber - user2Number);
+
+         if (user1Difference < user2Difference) {
+            document.write(`User 1 wins! </br> Computer's number was: ${computerNumber}`);
+         } else if (user2Difference < user1Difference) {
+            document.write(`User 2 wins! </br>  Computer's number was: ${computerNumber}`);
+         } else {
+            document.write(`It's a tie! </br>  Computer's number was: ${computerNumber}`);
+         }
+      }
+   </script>
+
+
+</body>
+
+</html>

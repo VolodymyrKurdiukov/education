@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../../css/style.css">
+   <title>Task 1</title>
+</head>
+
+<body>
+   <h2>A menu with emoticons is displayed on the screen. The user enters the menu item number and the corresponding emoticon image appears on the screen.</h2>
+<script>
+   //data enrty
+   let userInput = prompt("Enter the number of the menu item:");
+   let smile
+
+   //data validation and output
+   switch (parseInt(userInput)) {
+      case 1:
+         smile = "😊";
+         break;
+      case 2:
+         smile = "😢";
+         break;
+      case 3:
+         smile = "😡";
+         break;
+      case 4:
+         smile = "😱";
+         break;
+      case 5:
+         smile = "😎";
+         break;
+      default:
+         smile = "Invalid menu item number! Please enter a number between 1 and 5.";
+   }
+   document.write(`The selected menu item is: ${smile}`);
+</script>
+</body>
+
+</html>

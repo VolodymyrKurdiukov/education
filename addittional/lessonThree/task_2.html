@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../../css/style.css">
+   <title>Task 2</title>
+</head>
+
+<body>
+   <h2>The computer randomly selects the beginning and end of a range (the range must be between 1 and 100). The user
+      enters a number and wins if the number is within that range or within 10 of it (from the left or right edge).</h2>
+   <script>
+
+      //data entry
+      let min = Math.floor(Math.random() * 91) + 10; // Random number between 10 and 100
+      let max = Math.floor(Math.random() * (100 - min)) + min; // Random number between min and 100
+
+      let userNumber = parseInt(prompt(`Enter a number `), 10);
+      // validation and output
+      if (userNumber >= min - 10 && userNumber <= max + 10) {
+         document.write("You win! </br>");
+      } else {
+         document.write("You lose!");
+      }
+      document.write(`Random range: ${min} - ${max}`);
+   </script>
+
+</body>
+
+</html>
